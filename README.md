@@ -62,7 +62,7 @@ __Model Architecture:__
 The model architecture comprises several convolutional layers followed by max-pooling layers to extract meaningful features from the input grayscale images. It also includes dropout layers to prevent overfitting and a dense layer for making emotion predictions. The final output layer employs softmax activation to assign probabilities to each of the seven emotion classes: Angry, Disgust, Fear, Happy, Neutral, Sad, and Surprise.
 
 <p align="center">
-  <img src="images/model_plot.png">
+  <img src="facial-emotion-detection/images/model_plot.png">
 </p>
 
 __How the Model Works?__
