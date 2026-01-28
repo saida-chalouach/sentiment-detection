@@ -70,7 +70,7 @@ __How the Model Works?__
 **1. Data Preparation:** The FER-2013 dataset, containing grayscale facial images labeled with seven emotion categories, is used for training and testing the model.
 
 <p align="center">
-  <img src="images/test_sample.png">
+  <img src="facial-emotion-detection/images/test_sample.png">
 </p>
 
 **2. Model Training:** The emotion recognition model is trained on the training dataset using a deep learning approach. During training, the model learns to recognize patterns and features associated with different emotions.
