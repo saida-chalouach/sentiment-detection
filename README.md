@@ -83,15 +83,15 @@ When the training and validation curves touch and then the validation curve star
 **Potential solution:** To address this problem, techniques such as regularisation, reducing the complexity of the model or collecting more training data if possible can be used. The goal is for the model to generalise well, i.e. to perform well on both training data and unseen data such as validation or test data.
 
 <p align="center">
-  <img src="images/training and validation loss.png">
+  <img src="facial-emotion-detection/images/training and validation accuracy.png">
 </p>
 
 <p align="center">
-  <img src="images/training and validation accuracy.png">
+  <img src="facial-emotion-detection/images/training and validation loss.png">
 </p>
 
 <p align="center">
-  <img src="images/confusion_matrix.png">
+  <img src="facial-emotion-detection/images/confusion_matrix.png">
 </p>
 
 **4. Testing:** The trained model can also be used to classify emotions in your own images. Simply provide the file paths to the test images, and the model will predict the corresponding emotions.
@@ -101,7 +101,7 @@ When the training and validation curves touch and then the validation curve star
 </p>
 
 <p align="center">
-  <img src="images/prediction2.png">
+  <img src="facial-emotion-detection/images/prediction2.png">
 </p>
 
 <p align="center">
@@ -109,7 +109,7 @@ When the training and validation curves touch and then the validation curve star
 </p>
 
 <p align="center">
-  <img src="images/prediction1.png">
+  <img src="facial-emotion-detection/images/prediction1.png">
 </p>
 
 The model's performance is further assessed through metrics such as confusion matrices to analyze its ability to correctly classify each emotion category.
