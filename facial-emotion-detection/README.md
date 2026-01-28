@@ -115,6 +115,45 @@ When the training and validation curves touch and then the validation curve star
 The model's performance is further assessed through metrics such as confusion matrices to analyze its ability to correctly classify each emotion category.
 
 The achieved accuracy showcases the model's potential for a wide range of applications, from mood analysis to human-computer interaction. For more details on the model's architecture, training process, and performance, please refer to the project's documentation.
+## 🔍 Test the model on a custom image
+
+1️⃣ Put your image inside the `test_images/` folder.
+
+2️⃣ Make sure the image is a face image (grayscale or RGB).
+
+3️⃣ Run the following code:
+
+```python
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+from tensorflow.keras.models import load_model
+
+# Load model
+model = load_model("emotion_detection_model_100epochs.h5")
+
+# Class labels
+class_labels = ['Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral']
+
+# Image path
+img_path = "test_images/example.jpg"
+
+# Load image
+img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
+img = cv2.resize(img, (48, 48))
+img = img / 255.0
+img = img.reshape(1, 48, 48, 1)
+
+# Prediction
+prediction = model.predict(img)
+predicted_class = class_labels[np.argmax(prediction)]
+
+# Display result
+plt.imshow(img.reshape(48, 48), cmap='gray')
+plt.title(f"Prediction: {predicted_class}")
+plt.axis("off")
+plt.show()
+```
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
